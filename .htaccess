@@ -1,0 +1,3 @@
+RewriteEngine On
+# Basic rewrite rules if we wanted pretty URLs later, for now just standard
+# ErrorDocument 404 /index.php
