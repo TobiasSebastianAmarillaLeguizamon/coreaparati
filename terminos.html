@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - CoreaParaTi</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        accent: '#F43F5E',
+                        secondary: '#38BDF8',
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        title: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div>
+                    <span class="font-display font-bold text-2xl text-white tracking-tight">CoreaParaTi</span>
+                    <span class="block text-[10px] text-secondary font-medium tracking-widest uppercase -mt-1">K-Travel
+                        & Experience</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Inicio</a>
+                <a href="index.html#nosotros"
+                    class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Nosotros</a>
+
+                <!-- Dropdown -->
+                <div class="relative group">
+                    <a href="experiencias.html"
+                        class="flex items-center gap-1 text-sm font-semibold text-white hover:text-accent transition-colors py-4">
+                        Experiencias <i class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i>
+                    </a>
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-primary border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 overflow-hidden z-50">
+                        <div class="flex flex-col">
+                            <a href="experiencias.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">Ver
+                                Todo</a>
+                            <a href="k-beauty.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">K-Beauty
+                                Tour</a>
+                            <a href="k-pop.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors">K-Pop
+                                Tour</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="reservar.html"
+                    class="px-6 py-2 bg-gradient-to-r from-accent to-pink-600 text-white text-sm font-bold rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all">
+                    Reservar Ahora
+                </a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover:text-accent transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-white/10 absolute w-full z-50">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="index.html" class="text-slate-300 hover:text-accent font-medium">Inicio</a>
+                <a href="index.html#nosotros" class="text-slate-300 hover:text-accent font-medium">Nosotros</a>
+
+                <div class="flex flex-col gap-2">
+                    <a href="experiencias.html"
+                        class="text-white hover:text-accent font-medium flex justify-between items-center">
+                        Experiencias <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 flex flex-col gap-3 border-l border-white/10 my-2">
+                        <a href="k-beauty.html" class="text-slate-400 hover:text-accent text-sm">K-Beauty Tour</a>
+                        <a href="k-pop.html" class="text-slate-400 hover:text-accent text-sm">K-Pop Tour</a>
+                    </div>
+                </div>
+
+                <a href="reservar.html" class="text-accent font-bold">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="pt-24 pb-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="font-display font-bold text-4xl text-primary mb-8">Términos y Condiciones</h1>
+
+            <div
+                class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 prose prose-slate max-w-none">
+                <h3>1. Introducción</h3>
+                <p>Bienvenido a CoreaParaTi. Al reservar uno de nuestros paquetes turísticos, usted acepta los
+                    siguientes términos y condiciones. Por favor, léalos cuidadosamente.</p>
+
+                <h3>2. Reservas y Pagos</h3>
+                <p>Para confirmar su reserva, se requiere un depósito inicial no reembolsable del 30% del valor total
+                    del paquete. El saldo restante debe ser abonado en su totalidad 30 días antes de la fecha de salida
+                    programada.</p>
+
+                <h3>3. Política de Cancelación</h3>
+                <ul>
+                    <li>Cancelaciones con más de 60 días de antelación: Se reembolsará el 100% del monto pagado, menos
+                        el depósito inicial.</li>
+                    <li>Cancelaciones entre 59 y 30 días de antelación: Se reembolsará el 50% del monto pagado.</li>
+                    <li>Cancelaciones con menos de 30 días de antelación: No habrá reembolso.</li>
+                </ul>
+
+                <h3>4. Responsabilidad</h3>
+                <p>CoreaParaTi actúa como intermediario entre el cliente y los proveedores de servicios (aerolíneas,
+                    hoteles, transporte). No nos hacemos responsables por retrasos, accidentes, pérdidas de equipaje o
+                    eventos de fuerza mayor que escapen a nuestro control directo.</p>
+
+                <h3>5. Documentación</h3>
+                <p>Es responsabilidad exclusiva del viajero contar con un pasaporte válido (mínimo 6 meses de vigencia)
+                    y las visas necesarias (K-ETA) para ingresar a Corea del Sur.</p>
+
+                <h3>6. Modificaciones</h3>
+                <p>CoreaParaTi se reserva el derecho de modificar el itinerario o los alojamientos por otros de igual o
+                    superior categoría en caso de necesidad operativa.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-heart text-sm"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl tracking-tight">CoreaParaTi</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
+                        Tu puente cultural entre América Latina y Corea del Sur.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-6 text-secondary">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-slate-400 text-sm">
+                            <i class="fa-solid fa-envelope mt-1 text-accent"></i>
+                            <span>coreaparati.oficial@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs text-center md:text-left">
+                    &copy; 2026 CoreaParaTi. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a href="terminos.html" class="text-white text-xs transition-colors hover:text-accent">Términos y
+                        Condiciones</a>
+                    <a href="privacidad.html" class="text-slate-500 hover:text-white text-xs transition-colors">Política
+                        de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+
+</html>

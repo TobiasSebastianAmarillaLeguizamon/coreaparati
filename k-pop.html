@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Dream Tour - CoreaParaTi</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        accent: '#F43F5E',
+                        secondary: '#38BDF8',
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        title: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-black font-body text-slate-200 antialiased selection:bg-accent selection:text-white">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div>
+                    <span class="font-display font-bold text-2xl text-white tracking-tight">CoreaParaTi</span>
+                    <span class="block text-[10px] text-secondary font-medium tracking-widest uppercase -mt-1">K-Pop
+                        Edition</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-sm font-semibold text-slate-400 hover:text-accent transition-colors">Inicio</a>
+
+                <!-- Dropdown -->
+                <div class="relative group">
+                    <a href="experiencias.html"
+                        class="flex items-center gap-1 text-sm font-semibold text-accent hover:text-accent transition-colors py-4">
+                        Experiencias <i class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i>
+                    </a>
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-primary border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 overflow-hidden z-50">
+                        <div class="flex flex-col">
+                            <a href="experiencias.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">Ver
+                                Todo</a>
+                            <a href="k-beauty.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">K-Beauty
+                                Tour</a>
+                            <a href="k-pop.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors">K-Pop
+                                Tour</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="reservar.html"
+                    class="px-6 py-2 bg-gradient-to-r from-purple-600 to-accent text-white text-sm font-bold rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all">Reservar
+                    Ahora</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover:text-accent transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-white/10 absolute w-full z-50">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="index.html" class="text-slate-300 hover:text-accent font-medium">Inicio</a>
+
+                <div class="flex flex-col gap-2">
+                    <a href="experiencias.html"
+                        class="text-accent hover:text-accent font-medium flex justify-between items-center">
+                        Experiencias <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 flex flex-col gap-3 border-l border-white/10 my-2">
+                        <a href="k-beauty.html" class="text-slate-400 hover:text-accent text-sm">K-Beauty Tour</a>
+                        <a href="k-pop.html" class="text-slate-400 hover:text-accent text-sm">K-Pop Tour</a>
+                    </div>
+                </div>
+
+                <a href="reservar.html" class="text-accent font-bold">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="pt-20">
+        <!-- Hero Section -->
+        <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1533139824240-622f98d00018?auto=format&fit=crop&q=80&w=1974"
+                    class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div
+                    class="inline-block px-4 py-1 border border-accent rounded-full text-accent font-bold text-xs tracking-widest uppercase mb-6 animate-pulse">
+                    Edición 2026
+                </div>
+                <h1
+                    class="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 text-5xl md:text-8xl mb-6">
+                    K-Pop Dream <br> <span class="text-accent">Tour</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+                    La experiencia definitiva. No solo verás a tus idols, vivirás la industria desde adentro.
+                    Conciertos, agencias, baile y cultura.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="reservar.html?programa=kpop"
+                        class="px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-rose-600 transition-all shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1">
+                        Reservar mi lugar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlights Section -->
+        <section class="py-24 bg-black">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-8">Highlights del Tour</h2>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-purple-900/50 text-purple-400 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-music text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-xl">Wonder Show Concert</h3>
+                                    <p class="text-slate-400">Acceso preferencial a un line-up con más de 13 grupos top
+                                        <span>coreaparati.oficial@gmail.com</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-pink-900/50 text-accent rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-star text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-xl">K-Dance Party</h3>
+                                    <p class="text-slate-400">Fiesta exclusiva y clase privada con coreógrafos
+                                        profesionales de idols.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-building text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-xl">Agency Tour</h3>
+                                    <p class="text-slate-400">Visitas a exteriores de HYBE, SM, JYP y cafés de idols.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <!-- Decor elements -->
+                        <div class="absolute -top-10 -left-10 w-20 h-20 bg-accent rounded-full blur-3xl opacity-20">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-600 rounded-full blur-3xl opacity-20">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&q=80&w=1000"
+                                class="rounded-2xl w-full h-64 object-cover transform translate-y-8">
+                            <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=1000"
+                                class="rounded-2xl w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Stats -->
+        <section class="py-20 border-t border-white/10 bg-gradient-to-b from-black to-slate-900">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-white text-3xl font-display font-bold mb-12">Detalles del Paquete</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <div class="text-4xl font-bold text-white mb-2">10</div>
+                        <div class="text-accent uppercase text-xs font-bold tracking-widest">Días de Viaje</div>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <div class="text-4xl font-bold text-white mb-2">USD 3.780</div>
+                        <div class="text-accent uppercase text-xs font-bold tracking-widest">Precio Final</div>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <div class="text-4xl font-bold text-white mb-2">LIMITED</div>
+                        <div class="text-accent uppercase text-xs font-bold tracking-widest">Cupos Exclusivos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t border-white/10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 text-xs text-center">
+                &copy; 2026 CoreaParaTi. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

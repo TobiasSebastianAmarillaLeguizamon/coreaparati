@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - CoreaParaTi</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        accent: '#F43F5E',
+                        secondary: '#38BDF8',
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        title: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800 antialiased">
+    <!-- Navigation (Same as other pages) -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div>
+                    <span class="font-display font-bold text-2xl text-white tracking-tight">CoreaParaTi</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Inicio</a>
+                <a href="reservar.html"
+                    class="px-6 py-2 bg-gradient-to-r from-accent to-pink-600 text-white text-sm font-bold rounded-full hover:shadow-lg transition-all">Reservar
+                    Ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pt-24 pb-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="font-display font-bold text-4xl text-primary mb-8">Política de Privacidad</h1>
+
+            <div
+                class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 prose prose-slate max-w-none">
+                <h3>1. Recopilación de Información</h3>
+                <p>En CoreaParaTi, recopilamos información personal que usted nos proporciona voluntariamente a través
+                    de nuestro formulario de contacto o reserva (como su nombre, correo electrónico y número de
+                    teléfono).</p>
+
+                <h3>2. Uso de la Información</h3>
+                <p>Utilizamos su información exclusivamente para:</p>
+                <ul>
+                    <li>Procesar sus solicitudes de reserva y consultas.</li>
+                    <li>Enviarle información relevante sobre su viaje.</li>
+                    <li>Mejorar nuestros servicios y atención al cliente.</li>
+                </ul>
+
+                <h3>3. Protección de Datos</h3>
+                <p>Nos comprometemos a proteger la seguridad de su información personal. No vendemos, intercambiamos ni
+                    transferimos a terceros su información personal identificable, excepto cuando sea necesario para
+                    prestar el servicio (ej. reservas de hotel o vuelos).</p>
+
+                <h3>4. Cookies</h3>
+                <p>Este sitio web puede utilizar cookies para mejorar su experiencia de navegación. Usted puede optar
+                    por desactivar las cookies a través de la configuración de su navegador.</p>
+
+                <h3>5. Contacto</h3>
+                <p>Si tiene preguntas sobre esta política de privacidad, puede contactarnos en:
+                    <strong>coreaparati.oficial@gmail.com</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs text-center md:text-left">
+                    &copy; 2026 CoreaParaTi. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a href="terminos.html" class="text-slate-500 hover:text-white text-xs transition-colors">Términos y
+                        Condiciones</a>
+                    <a href="privacidad.html" class="text-white text-xs transition-colors hover:text-accent">Política de
+                        Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

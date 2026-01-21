@@ -31,6 +31,8 @@
                             red: '#DC2626'
                         }
                     },
+
+
                     fontFamily: {
                         display: ['Syne', 'sans-serif'],
                         title: ['Montserrat', 'sans-serif'],
@@ -86,8 +88,27 @@
                     class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Inicio</a>
                 <a href="index.html#nosotros"
                     class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Nosotros</a>
-                <a href="experiencias.html"
-                    class="text-sm font-semibold text-slate-300 hover:text-accent transition-colors">Experiencias</a>
+                <!-- Dropdown -->
+                <div class="relative group">
+                    <a href="experiencias.html"
+                        class="flex items-center gap-1 text-sm font-semibold text-slate-300 hover:text-accent transition-colors py-4">
+                        Experiencias <i class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i>
+                    </a>
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-primary border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 overflow-hidden z-50">
+                        <div class="flex flex-col">
+                            <a href="experiencias.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">Ver
+                                Todo</a>
+                            <a href="k-beauty.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors border-b border-white/5">K-Beauty
+                                Tour</a>
+                            <a href="k-pop.html"
+                                class="px-4 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-accent transition-colors">K-Pop
+                                Tour</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="reservar.html"
                     class="px-6 py-2 bg-gradient-to-r from-accent to-pink-600 text-white text-sm font-bold rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all transform hover:-translate-y-0.5">
                     Reservar Ahora
@@ -105,7 +126,16 @@
             <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
                 <a href="index.html" class="text-slate-300 hover:text-accent font-medium">Inicio</a>
                 <a href="index.html#nosotros" class="text-slate-300 hover:text-accent font-medium">Nosotros</a>
-                <a href="experiencias.html" class="text-slate-300 hover:text-accent font-medium">Experiencias</a>
+                <div class="flex flex-col gap-2">
+                    <a href="experiencias.html"
+                        class="text-slate-300 hover:text-accent font-medium flex justify-between items-center">
+                        Experiencias <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 flex flex-col gap-3 border-l border-white/10 my-2">
+                        <a href="k-beauty.html" class="text-slate-400 hover:text-accent text-sm">K-Beauty Tour</a>
+                        <a href="k-pop.html" class="text-slate-400 hover:text-accent text-sm">K-Pop Tour</a>
+                    </div>
+                </div>
                 <a href="reservar.html" class="text-accent font-bold">Reservar Ahora</a>
             </div>
         </div>
@@ -114,9 +144,11 @@
 
         <!-- Hero Section -->
         <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&q=80&w=1974"
-                    alt="Seoul Night Line" class="w-full h-full object-cover">
+            <div class="absolute inset-0 overflow-hidden">
+                <img id="hero-bg"
+                    src="https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&q=80&w=1974"
+                    alt="Seoul Night Line"
+                    class="w-full h-full object-cover transform scale-110 transition-transform duration-100 ease-out will-change-transform">
                 <div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary"></div>
             </div>
 
@@ -159,8 +191,8 @@
                     <div class="w-full md:w-1/2 relative">
                         <div
                             class="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-                            <img src="https://images.unsplash.com/photo-1623832049688-66236b28b74a?auto=format&fit=crop&q=80&w=1974"
-                                alt="Fans en Corea" class="w-full aspect-[4/3] object-cover">
+                            <img src="assets/img/about-us.png" alt="Fans en Corea"
+                                class="w-full aspect-[4/3] object-cover">
                         </div>
                         <div class="absolute -bottom-6 -left-6 w-full h-full border-4 border-accent rounded-2xl -z-0">
                         </div>
@@ -211,21 +243,21 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <!-- Card 1 -->
-                    <div class="group bg-white rounded-3xl overflow-hidden shadow-xl card-hover-effect relative">
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-xl card-hover-effect relative"
+                        data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                         <div class="h-64 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1543161099-3549226cb12a?auto=format&fit=crop&q=80&w=1974"
-                                alt="Otoño en Corea"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <img src="assets/img/k-beauty-card.png" alt="K-Beauty Tour"
+                                class="transform translate-z-12 group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
                             <div
-                                class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary font-bold px-4 py-1 rounded-full text-sm">
+                                class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary font-bold px-4 py-1 rounded-full text-sm transform translate-z-20">
                                 <i class="fa-solid fa-star text-yellow-400 mr-1"></i> Top Seller
                             </div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 transform translate-z-10">
                             <div class="flex justify-between items-center mb-4">
                                 <h3
                                     class="font-display font-bold text-2xl text-primary group-hover:text-accent transition-colors">
-                                    Otoño en Corea</h3>
+                                    K-Beauty Tour</h3>
                                 <span class="text-slate-400 text-sm">8 u 11 días</span>
                             </div>
                             <p class="text-slate-500 mb-6">Vive la estación más romántica. Isla Nami, locaciones de
@@ -239,17 +271,17 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="group bg-white rounded-3xl overflow-hidden shadow-xl card-hover-effect relative">
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-xl card-hover-effect relative"
+                        data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                         <div class="h-64 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1533139824240-622f98d00018?auto=format&fit=crop&q=80&w=1974"
-                                alt="K-Pop Dream Tour"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <img src="assets/img/k-pop-card.png" alt="K-Pop Dream Tour"
+                                class="transform translate-z-12 group-hover:scale-110 transition-transform duration-700 w-full h-full object-cover">
                             <div
-                                class="absolute top-4 right-4 bg-accent text-white font-bold px-4 py-1 rounded-full text-sm animate-pulse">
+                                class="absolute top-4 right-4 bg-accent text-white font-bold px-4 py-1 rounded-full text-sm animate-pulse transform translate-z-20">
                                 New 2026
                             </div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 transform translate-z-10">
                             <div class="flex justify-between items-center mb-4">
                                 <h3
                                     class="font-display font-bold text-2xl text-primary group-hover:text-accent transition-colors">
@@ -358,12 +390,9 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-slate-400 text-sm">
                             <i class="fa-solid fa-envelope mt-1 text-accent"></i>
-                            <span>hola@coreaparati.com</span>
+                            <span>coreaparati.oficial@gmail.com</span>
                         </li>
-                        <li class="flex items-start gap-3 text-slate-400 text-sm">
-                            <i class="fa-brands fa-whatsapp mt-1 text-accent"></i>
-                            <span>+82 10-1234-5678</span>
-                        </li>
+
                         <li class="flex items-start gap-3 text-slate-400 text-sm">
                             <i class="fa-solid fa-location-dot mt-1 text-accent"></i>
                             <span>Gangnam-gu, Seoul, South Korea</span>
@@ -393,6 +422,22 @@
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- 3D Tilt Effect Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+    <!-- Hero Parallax Script -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const heroBg = document.getElementById('hero-bg');
+            if (!heroBg) return;
+
+            const x = (window.innerWidth - e.pageX * 2) / 50;
+            const y = (window.innerHeight - e.pageY * 2) / 50;
+
+            heroBg.style.transform = `scale(1.1) translateX(${x}px) translateY(${y}px)`;
         });
     </script>
 </body>
